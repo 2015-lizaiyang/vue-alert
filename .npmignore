@@ -4,6 +4,7 @@ dist
 coverage
 .idea
 .jshintrc
+npm-debug.log
 /src/
 /examples/
 webpack.config.js
