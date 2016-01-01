@@ -14,6 +14,7 @@
     font-size: 13px;
     color: #fff;
     text-align: center;
+    max-width: 80%;
     -webkit-user-select: none;
   }
   .bounce-transition {
