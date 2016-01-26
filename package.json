@@ -1,6 +1,6 @@
 {
   "name": "vue-alert",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "a mobile native popup alert component",
   "main": "lib/index.js",
   "scripts": {

@@ -12,5 +12,7 @@ Vue.use(VueAlert);
 Basic use:
 
 ```JavaScript
-vm.$alert("password is required!");
+vm.$alert('password is required!');
+vm.$alert('password is required!', 'top');
+vm.$alert('password is required!', 'bottom');
 ```
