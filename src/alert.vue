@@ -1,5 +1,5 @@
 <template>
-  <div class="alert-wrapper" transition="bounceIn">
+  <div class="alert-wrapper" :class="positionClass" transition="fadeIn">
     <div class="alertBox">{{message}}
     </div>
   </div>
@@ -13,7 +13,13 @@
     text-align: center;
     width: 100%;
     transform: translate(0, -50%);
-    animation-duration: .75s;
+    transition: opacity .3s linear;
+  }
+  .alert-wrapper.alert-bottom,
+  .alert-wrapper.alert-top {
+    bottom: 10%;
+    top: auto;
+    transform: translate(0, 0);
   }
   .alertBox {
     padding: 15px 20px;
@@ -25,59 +31,22 @@
     max-width: 80%;
     -webkit-user-select: none;
   }
-  .bounceIn-transition {
-    animation-name: bounceIn;
+  .fadeIn-transition {
+    opacity: 1;
   }
-  .bounceIn-leave {
+  .fadeIn-leave,
+  .fadeIn-enter {
     opacity: 0;
-    transition: all .75s ease;
-  }
-  @keyframes bounceIn {
-    0%,100%,20%,40%,60%,80% {
-        animation-timing-function: cubic-bezier(0.215,.61,.355,1)
-    }
-
-    0% {
-        opacity: 0;
-        transform: translate(0, -50%) scale3d(.3,.3,.3);
-    }
-
-    20% {
-        transform: translate(0, -50%) scale3d(1.1,1.1,1.1);
-    }
-
-    40% {
-        transform: translate(0, -50%) scale3d(.9,.9,.9);
-    }
-
-    60% {
-        opacity: 1;
-        transform: translate(0, -50%) scale3d(1.03,1.03,1.03);
-    }
-
-    80% {
-        transform: translate(0, -50%) scale3d(.97,.97,.97);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0, -50%) scale3d(1,1,1);
-    }
   }
 </style>
 
 <script type="text/ecmascript-6" lang="babel">
 
   export default {
-
-    methods: {
-      
-    },
-
-    data() {
-      return {
-        message: ''
-      };
+    computed: {
+      positionClass() {
+        return this.position ? `alert-${this.position}` : '';
+      }
     }
   }
 </script>

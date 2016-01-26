@@ -11,14 +11,15 @@ function install(Vue) {
 
         get: function () {
 
-            return (message) => {
+            return (message, position) => {
                 if (alertInstance) return;
                 alertInstance = new AlertConstructor({
                     el: document.createElement('div'),
                     data() {
                         return {
-                            message: message
-                        }
+                            message: message,
+                            position: position
+                        };
                     }
                 });
                 alertInstance.$appendTo(document.body);
@@ -27,7 +28,7 @@ function install(Vue) {
 
     });
 
-    Vue.transition('bounceIn', {
+    Vue.transition('fadeIn', {
         afterEnter: function (el) {
             setTimeout(() => {
                 alertInstance.$remove();
