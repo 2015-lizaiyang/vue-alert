@@ -1,10 +1,10 @@
 {
   "name": "vue-alert",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "a mobile native popup alert component",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "cp src/*.vue lib & node_modules/babel-cli/bin/babel.js src --out-dir lib"
+    "prepublish": "sudo cp src/*.vue lib & node_modules/babel-cli/bin/babel.js src --out-dir lib"
   },
   "devDependencies": {
     "babel-cli": "^6.3.15",
