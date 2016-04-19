@@ -15,10 +15,14 @@
     transform: translate(0, -50%);
     transition: opacity .3s linear;
   }
-  .alert-wrapper.alert-bottom,
-  .alert-wrapper.alert-top {
+  .alert-wrapper.alert-bottom {
     bottom: 10%;
     top: auto;
+    transform: translate(0, 0);
+  }
+  .alert-wrapper.alert-top {
+    top: 10%;
+    bottom: auto;
     transform: translate(0, 0);
   }
   .alertBox {
