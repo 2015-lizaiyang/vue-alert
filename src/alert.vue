@@ -45,12 +45,11 @@
 </style>
 
 <script type="text/ecmascript-6" lang="babel">
-
   export default {
     computed: {
       positionClass() {
         return this.position ? `alert-${this.position}` : '';
       }
     }
-  }
+  };
 </script>
