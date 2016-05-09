@@ -14,6 +14,7 @@
     width: 100%;
     transform: translate(0, -50%);
     transition: opacity .3s linear;
+    z-index: 99999;
   }
   .alert-wrapper.alert-bottom {
     bottom: 10%;
@@ -30,7 +31,7 @@
     display: inline-block;
     background-color: rgba(0,0,0,0.75);
     border-radius: 3px;
-    font-size: 13px;
+    font-size: 0.9em;
     color: #fff;
     max-width: 80%;
     -webkit-user-select: none;
