@@ -8,7 +8,7 @@ module.exports = {
   },
   entry: './src',
   output: {
-    library: 'vue-alert',
+    library: 'VueAlert',
     libraryTarget: 'umd',
     filename: `vue-alert.js`,
     path: './dist'
