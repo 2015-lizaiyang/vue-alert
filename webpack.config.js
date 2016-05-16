@@ -8,11 +8,13 @@ module.exports = {
   },
   entry: './src',
   output: {
-    library: vue-alert,
+    library: 'vue-alert',
     libraryTarget: 'umd',
-    filename: `${fileName}.js`,
-    path: './dist',
-    filename: 'index.js'
+    filename: `vue-alert.js`,
+    path: './dist'
+  },
+  externals: {
+    'vue': 'Vue',
   },
   babel: {
     presets: ['es2015'],
