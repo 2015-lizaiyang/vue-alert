@@ -11,11 +11,11 @@ function install(Vue) {
 
         get: function () {
 
-            return (message, position) => {
+            return function(message, position) {
                 if (alertInstance) return;
                 alertInstance = new AlertConstructor({
                     el: document.createElement('div'),
-                    data() {
+                    data: function() {
                         return {
                             message: message,
                             position: position
@@ -30,7 +30,7 @@ function install(Vue) {
 
     Vue.transition('fadeIn', {
         afterEnter: function (el) {
-            setTimeout(() => {
+            setTimeout(function() {
                 alertInstance.$remove();
             }, 2000);
         },
