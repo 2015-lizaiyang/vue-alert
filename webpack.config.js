@@ -8,7 +8,10 @@ module.exports = {
   },
   entry: './src',
   output: {
-    path: './lib',
+    library: vue-alert,
+    libraryTarget: 'umd',
+    filename: `${fileName}.js`,
+    path: './dist',
     filename: 'index.js'
   },
   babel: {
